@@ -1,9 +1,7 @@
 
 import pygame as py
 # import level as lvl
-import sprite_loading as sl
-import enum
-import threading
+from OtherCode import sprite_loading as sl
 
 
 class Dir:
