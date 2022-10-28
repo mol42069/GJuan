@@ -9,7 +9,7 @@ from enum import Enum
 
 def load_all():
     sprites = []
-    play_img = py.image.load("./SpriteSheets_etc/temp_Play.png")
+    play_img = py.image.load("../SpriteSheets_etc/temp_Play.png")
 
     sprites.insert(0, play_img)
 
