@@ -34,7 +34,6 @@ def main():
 
         x += vel_x
         y += vel_y
-
         display.fill(black)
         display.blit(sprites[sl.Sprite.PLAY.value], (x, y))
         py.display.flip()
@@ -66,18 +65,17 @@ def main():
                     if vel_x < max_vel:
                         vel_x += acc
 
-        if len(curr_dir) == 0:
-            if vel_y < 0:
-                vel_y += dacc
+        if vel_y < 0:
+            vel_y += dacc
 
-            elif vel_y > 0:
-                vel_y -= dacc
+        if vel_y > 0:
+            vel_y -= dacc
 
-            if vel_x < 0:
-                vel_x += dacc
+        if vel_x < 0:
+            vel_x += dacc
 
-            elif vel_x > 0:
-                vel_x -= dacc
+        if vel_x > 0:
+            vel_x -= dacc
 
         for event in py.event.get():
             if event.type == py.KEYDOWN:
@@ -106,6 +104,7 @@ def main():
                 match event.key:
                     case py.K_w:
                         curr_dir.remove(Dir.UP)
+
                     case py.K_a:
                         curr_dir.remove(Dir.LEFT)
 
