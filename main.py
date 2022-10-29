@@ -35,7 +35,8 @@ def main():
         x += vel_x
         y += vel_y
         display.fill(black)
-        display.blit(sprites[sl.Sprite.PLAY.value], (x, y))
+        display.blit(sprites[sl.Sprite.PLAYER.value][0], (x, y))
+        display.blit(sprites[sl.Sprite.PLAYER.value][1], (x, y - 30))
         py.display.flip()
 
 # ----------------------------------------------------- movement ----------------------------------------------------- #
